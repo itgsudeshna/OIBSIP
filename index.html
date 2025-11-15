@@ -1,244 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="index.css">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <nav>
-        <div class="logo">
-            <h1>Eat<span>Right</span></h1>
-        </div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Foods</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Blogs</a></li>
-        </ul>
+    <div class="container">
+        <div class="temperature-converter">
+            <div class="mobile">
+                <p>9.30 AM </p>
+                <div>
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-full"></i>
 
-        <div class="icons">
-            <i class="fa-solid fa-bars" id="bar"></i>
-            <i class="fa-solid fa-magnifying-glass" id="search"></i>
-            <i class="fa-solid fa-user" id="user"></i>
-        </div>
-        <div class="theme-toggle">
-            <i class="fa-solid fa-sun" id="toggleLight"></i>
-            <i class="fa-solid fa-moon" id="toggleDark"></i>
-        </div>
-    </nav>
+                </div>
+            </div>
+            <h2 class="title">Temperature Converter</h2>
 
-    <div class="main">
-        <div class="mainText">
-            <h1><span>Eat Better</span> Not Less</h1>
-            <h3>Healthy <span>Food</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, unde odit. Quod laborum quos
-                inciduntquibusdam et mollitia maxime blanditiis aut! Natus deserunt commodi, dolor cum perspiciatis sed
-                nonsuscipit.</p>
-            <button>Explore Now</button>
-        </div>
-        <img src="food.png" alt="">
-    </div>
-
-    <div class="fdCard" id="food">
-        <div class="head">
-            <h3>Our <span>Foods </span></h3>
-        </div>
-        <div class="cards">
-            <div class="crd">
-                <img src="f1.jpg" alt="">
-                <h3>Eat Healthy</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea inventore commodi voluptatem unde
-                    inveritatis accusantium dolorem consequuntur cum, id dolorum deleniti nobis ut odit
-                    officiaconsequatur saepe! Iure, accusantium.</p>
-                <button>Order</button>
+            <div class="result">
+                <span class="result-heading">Result (Celsius)</span>
+                <h2 class="celsius-value" id="celsius"></h2>
             </div>
-            <div class="crd">
-                <img src="f2.jpg" alt="">
-                <h3>Eat Healthy</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea inventore commodi voluptatem unde
-                    inveritatis accusantium dolorem consequuntur cum, id dolorum deleniti nobis ut odit officia
-                    onsequatur saepe! Iure, accusantium.</p>
-                <button>Order</button>
+            <div class="degree-type">
+                <div class="degree-field">
+                    <label for="degree">Degrees</label>
+                    <input type="number" name="degree" id="degree">
+                </div>
+                <div class="temp-field">
+                    <label for="temp-type">Type</label>
+                    <select name="temperature" id="temp-type" autocomplete="on">
+                        <option value="fahrenheit" id="fahrenheit">Fahrenheit</option>
+                        <option value="Kelvin" id="kelvin">Kelvin</option>
+                    </select>
+                </div>
             </div>
-            <div class="crd">
-                <img src="f3.jpg" alt="">
-                <h3>Eat Healthy</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea inventore commodi voluptatem unde in
-                    veritatis accusantium dolorem consequuntur cum, id dolorum deleniti nobis ut odit officiaconsequatur
-                    saepe! Iure, accusantium.</p>
-                <button>Order</button>
-            </div>
-            <div class="crd">
-                <img src="f4.jpg" alt="">
-                <h3>Eat Healthy</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea inventore commodi voluptatem unde
-                    inveritatis accusantium dolorem consequuntur cum, id dolorum deleniti nobis ut odit
-                    officiaconsequatur saepe! Iure, accusantium.</p>
-                <button>Order</button>
-            </div>
-            <div class="crd">
-                <img src="f5.jpg" alt="">
-                <h3>Eat Healthy</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea inventore commodi voluptatem unde in
-                    veritatis accusantium dolorem consequuntur cum, id dolorum deleniti nobis ut odit officia
-                    consequatur saepe! Iure, accusantium.</p>
-                <button>Order</button>
-            </div>
-            <div class="crd">
-                <img src="f6.jpg" alt="">
-                <h3>Eat Healthy</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea inventore commodi voluptatem unde in
-                    veritatis accusantium dolorem consequuntur cum, id dolorum deleniti nobis ut odit officia
-                    consequatur saepe! Iure, accusantium.</p>
-                <button>Order </button>
-            </div>
-            <div class="crd">
-                <img src="f7.jpeg" alt="">
-                <h3>Eat Healthy</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea inventore commodi voluptatem unde
-                    inveritatis accusantium dolorem consequuntur cum, id dolorum deleniti nobis ut odit officia
-                    consequatur saepe! Iure, accusantium.</p>
-                <button>Order</button>
-            </div>
-            <div class="crd">
-                <img src="f8.jpeg" alt="">
-                <h3>Eat Healthy</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea inventore commodi voluptatem unde
-                    inveritatis accusantium dolorem consequuntur cum, id dolorum deleniti nobis ut odit
-                    officiaconsequatur saepe! Iure, accusantium.</p>
-                <button>Order</button>
-            </div>
-            <div class="crd">
-                <img src="f9.jpeg" alt="">
-                <h3>Eat Healthy</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea inventore commodi voluptatem unde in
-                    veritatis accusantium dolorem consequuntur cum, id dolorum deleniti nobis ut odit officiaconsequatur
-                    saepe! Iure, accusantium.</p>
-                <button>Order </button>
-            </div>
+            <button id="convert-btn">Convert</button>
         </div>
     </div>
-
-
-    <div class="customer" id="reviews">
-        <div class="head">
-            <h3>Customer <span>Reviews</span></h3>
-        </div>
-        <div class="review">
-            <div class="slide">
-                <img src="m1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, animi accusantium. Libero sed
-                    nam quis exercitationem dignissimos blanditiis praesentium quod facere, quam ipsam omnis? Cupiditate
-                    ut facere quod optio illum!</p>
-            </div>
-            <div class="slide">
-                <img src="m2.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, animi accusantium. Libero sed
-                    nam quis exercitationem dignissimos blanditiis praesentium quod facere, quam ipsam omnis? Cupiditate
-                    ut facere quod optio illum!</p>
-            </div>
-            <div class="slide">
-                <img src="m3.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, animi accusantium. Libero sed
-                    nam quis exercitationem dignissimos blanditiis praesentium quod facere, quam ipsam omnis? Cupiditate
-                    ut facere quod optio illum!</p>
-            </div>
-            <div class="slide">
-                <img src="m4.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, animi accusantium. Libero sed
-                    nam quis exercitationem dignissimos blanditiis praesentium quod facere, quam ipsam omnis? Cupiditate
-                    ut facere quod optio illum!</p>
-            </div>
-            <div class="slide">
-                <img src="m5.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, animi accusantium. Libero sed
-                    nam quis exercitationem dignissimos blanditiis praesentium quod facere, quam ipsam omnis? Cupiditate
-                    ut facere quod optio illum!</p>
-            </div>
-            <div class="slide">
-                <img src="m6.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, animi accusantium. Libero sed
-                    nam quis exercitationem dignissimos blanditiis praesentium quod facere, quam ipsam omnis? Cupiditate
-                    ut facere quod optio illum!</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="read">
-        <div class="head">
-            <h3>Read <span>Blogs </span></h3>
-        </div>
-
-        <div class="blog">
-            <div class="blogCard">
-                <img src="fit.jpg" alt="">
-                <h3>Best Foods For Fitness</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi saepe quaerat accusamus, blanditiis enim nostrum voluptate libero velit suscipit, ipsa omnis aperiam. A ipsum iure molestiae, et corporis omnis porro?</p>
-                <a href="">Read More</a>
-            </div>
-             <div class="blogCard">
-                <img src="m4.png" alt="">
-                <h3>Best Foods For Fitness</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi saepe quaerat accusamus, blanditiis enim nostrum voluptate libero velit suscipit, ipsa omnis aperiam. A ipsum iure molestiae, et corporis omnis porro?</p>
-                <a href="">Read More</a>
-            </div>
-             <div class="blogCard">
-                <img src="f3.jpg" alt="">
-                <h3>Best Foods For Fitness</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi saepe quaerat accusamus, blanditiis enim nostrum voluptate libero velit suscipit, ipsa omnis aperiam. A ipsum iure molestiae, et corporis omnis porro?</p>
-                <a href="">Read More</a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="footer">
-        <div class="text">
-            <h3>About Us</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nobis et. Reiciendis enim repellendus suscipit quia rerum ipsam unde aut voluptatum, commodi necessitatibus, dolor sequi itaque accusantium. Repudiandae, magni delectus?</p>
-        </div>
-        <div class="text">
-            <h3>Healthy</h3>
-            <p>Good Healthy</p>
-            <p>Fitness</p>
-            <p>Nutrition</p>
-            <p>Work Beast</p>
-        </div>
-        <div class="text">
-            <p>Food</p>
-            <p>Quality</p>
-            <p>Best Price</p>
-            <p>Good</p>
-            <p>Best For Fitness</p>
-        </div>
-        <div class="text">
-            <h3>Contact</h3>
-            <p>3333-3333-3333</p>
-            <p>Galaxy Plaza</p>
-            <p>Mohali, Chandigarh</p>
-            <p>333333333333333</p>
-        </div>
-    </div>
-
-    <div class="end">
-        <p>Created By : Sudeshna Sarkar</p>
-    </div>
-
-    <script src="index.js"></script>
-
-
-
-
-
-
-
+    
+    <script src="js/app.js"></script>
 </body>
-
 </html>
